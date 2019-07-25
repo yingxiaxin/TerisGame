@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>俄罗斯方块</title>
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            #root {
+                display: flex;
+                justify-content: center;
+            }
+
+            #panel {
+                width: 300px;
+                height: 300px;
+                background: #000;
+                position: relative;
+            }
+
+            #tip {
+                margin-left: 1em;
+            }
+
+            #next {
+                position: relative;
+                width: 120px;
+                height: 120px;
+            }
+
+            #score {
+                font-size: 3.5em;
+                font-weight: bold;
+                text-align: center;
+                color: palevioletred;
+            }
+
+            #msg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, .3);
+                z-index: 999;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+            }
+
+            #msg p {
+                border: 2px solid white;
+                padding: 1em;
+                color: white;
+                background: #f20;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root">
+            <div id="panel">
+                <div id="msg">
+                    <p id="msgText"></p>
+                </div>
+            </div>
+            <div id="tip">
+                <div id="next"></div>
+                <div id="score"></div>
+                <p>使用键盘方向键进行游戏：</p>
+                <p>
+                    ↑：旋转
+                </p>
+                <p>
+                    ↓：向下
+                </p>
+                <p>
+                    ←：左
+                </p>
+                <p>
+                    →：右
+                </p>
+                <p>
+                    空格：暂停/恢复/开始
+                </p>
+            </div>
+        </div>
+    <script type="text/javascript" src="script/bundle.js"></script></body>
+</html>
